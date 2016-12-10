@@ -75,19 +75,19 @@ cd ceph-deploy
 ceph-deploy --cluster ceph001 new --public-network 192.168.18.0/24 --cluster-network 192.168.180.0/24 ceph-001
 ```
 
-9.
+9.初始监控节点并收集密钥
 
 ```
 ceph-deploy mon create-initial
 ```
 
-10.
+10.创建monitor
 
 ```
 ceph-deploy mon create
 ```
 
-11.
+11.添加osd
 
 ```
 ceph-deploy osd prepare ceph-01:/dev/sdb ceph-01:/dev/sdc ceph-01:/dev/sdd
