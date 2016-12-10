@@ -93,13 +93,35 @@ ceph-deploy mon create
 ceph-deploy osd prepare ceph-01:/dev/sdb ceph-01:/dev/sdc ceph-01:/dev/sdd
 ```
 
-12.这时用ceph命令就可以看到集群运行了，但是ERROR状态。原因是Ceph默认3副本，隔离域是host，默认会创建一个rbd的pool。
+12.这时用ceph命令就可以看到集群运行了，但是ERROR状态。
+
+原因是Ceph默认3副本（replicated size 3），隔离域是host，默认会创建一个rbd的pool。
 
 ```
 ceph -s
+ceph osd dump
 ```
 
 13.修改pool的副本数为1
 
+```
+ceph osd pool set rbd size 1
+```
 
+副本数默认值是3，可以把配置写到/etc/ceph/ceph.conf中，并重启ceph服务，以后创建的pool就都是1副本了。
+
+```
+vi /etc/ceph/ceph.conf
+添加
+osd_pool_default_size = 1
+```
+
+重启ceph服务
+
+```
+stop ceph-all
+start ceph-all
+```
+
+这样一个单机Ceph集群就搭建好了，当然也可以修改crushmap完成单机版3副本的Ceph集群，但是1副本的Ceph在资源不足的情况下测试足够用啦。
 
