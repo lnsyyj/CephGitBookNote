@@ -4,11 +4,11 @@
 
 在这个例子中，虚拟机挂载三块硬盘，每块硬盘大小**不小于**10G，因为journal需要5G分区，如果小于等于5G第二个分区会建不出来。
 
-系统是ubuntu-14.04.1-server-amd64
+两块挂载网卡、三块硬盘。
 
-两块挂载网卡、三块硬盘
+OS：ubuntu-14.04.1-server-amd64
 
-主机名叫ceph-01
+host name：ceph-01
 
 1.安装ceph-deploy
 
