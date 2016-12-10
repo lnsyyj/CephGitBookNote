@@ -72,7 +72,7 @@ cd ceph-deploy
 8.使用ceph-deploy创建一个mon
 
 ```
-ceph-deploy --cluster ceph001 new --public-network 192.168.18.0/24 --cluster-network 192.168.180.0/24 ceph-001
+ceph-deploy --cluster ceph01 new --public-network 192.168.18.0/24 --cluster-network 192.168.180.0/24 ceph-01
 ```
 
 9.初始监控节点并收集密钥
@@ -100,6 +100,4 @@ ceph -s
 ```
 
 13.修改pool的副本数为1
-
-
 
