@@ -8,9 +8,11 @@
 
 [https://github.com/01org/virtual-storage-manager](https://github.com/01org/virtual-storage-manager)
 
+http://openattic.org/home.html
+
 rados gateway相关：
 
 [https://github.com/nfs-ganesha/nfs-ganesha](https://github.com/nfs-ganesha/nfs-ganesha)
 
-https://github.com/s3fs-fuse/s3fs-fuse
+[https://github.com/s3fs-fuse/s3fs-fuse](https://github.com/s3fs-fuse/s3fs-fuse)
 
