@@ -8,4 +8,5 @@
 * [关于rados gateway API](关于rados-gateway-api.md)
 * [inkscope踩过的坑](inkscope踩过的坑.md)
 * [inkscope集成influxDB ---新版](inkscope集成influxdb----新版.md)
+* [inkscope部署](inkscope部署.md)
 
