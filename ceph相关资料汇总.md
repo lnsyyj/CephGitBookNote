@@ -8,5 +8,5 @@ Ceph中国社区的网盘：[`https://pan.baidu.com/share/home?uk=1029894590\#ca
 
 Ceph社区微信公众号 - 搜索关键词： `ceph开源社区、ceph开发每周谈、360基础架构组、福叔讲存储、oNest黑板报`
 
-Ceph社区QQ群：`239404559`
+Ceph中国社区QQ群：`239404559`
 
