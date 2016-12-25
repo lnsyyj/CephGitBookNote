@@ -204,6 +204,15 @@ ServerName ceph-01
 
 配置rados gateway时，需要手动创建一个账号，并赋予相应的caps。
 
+```
+radosgw-admin user create --uid=admin --display-name="Admin" --email=lnsyyj@hotmail.com
+radosgw-admin caps add --uid=admin --caps="users=*"
+radosgw-admin caps add --uid=admin --caps="buckets=*"
+radosgw-admin caps add --uid=admin --caps="metadata=*"
+radosgw-admin caps add --uid=admin --caps="usage=*"
+radosgw-admin caps add --uid=admin --caps="zone=*"
+```
+
 **各节点全部部署完后**
 
 Browser访问[http://192.168.18.106:8080/](http://192.168.18.106:8080/)
