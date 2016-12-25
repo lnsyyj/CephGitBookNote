@@ -221,7 +221,7 @@ radosgw-admin caps add --uid=admin --caps="zone=*"
 
 问题：
 
-1、rbd前台页面报keyring权限问题，修改/etc/ceph/的keyring权限为644，chmod +r \*
+1、rbd前台页面报500，keyring权限问题，修改/etc/ceph/的keyring权限为644，chmod +r \*
 
 2、inkscope的正则无法匹配机器名，导致前台无法正常显示物理机的信息。这个问题一般不会遇到，所以不需要修改，我们只是偶然遇到的。
 
