@@ -39,26 +39,25 @@ inkscope版本：1.4.0.2
 **ceph-mon 节点**
 
 ```
-（1）
+（1）添加inkscope源
 vi /etc/apt/sources.list.d/inkscope.list
 添加
 官方源： deb https://raw.githubusercontent.com/inkscope/inkscope-packaging/master/DEBS ./
 # apt-get update
-（2）
+（2）安装依赖包
 # apt-get install python-pip  python-dev  sysstat  lshw
 # apt-get install inkscope-common inkscope-sysprobe inkscope-cephrestapi inkscope-cephprobe
 # pip install psutil==2.1.3
 # pip install pymongo==2.6.3
-（3）
+（3）修改ceph配置文件
 # vi /etc/ceph/ceph.conf
 添加
 [client.restapi]
 log_file = /var/log/ceph/ceph-rest-api.log
 keyring = /etc/ceph/ceph.client.admin.keyring
-（4）
-启动ceph-rest-api服务
+（4）启动ceph-rest-api服务
 # nohup ceph-rest-api -n client.admin &
-（5）
+（5）修改inkscope配置文件
 # vi /opt/inkscope/etc/inkscope.conf
     "ceph_rest_api": "192.168.18.105:5000",
     "ceph_rest_api_subfolder": "",
