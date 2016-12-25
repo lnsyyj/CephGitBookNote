@@ -14,9 +14,11 @@ https://github.com/inkscope/inkscope
 
 ![](/assets/inkscope.png)
 
-架构比较清晰的告诉了我们哪些ceph节点需要部署inkscope的哪些组件，下面是我测试的部署步骤。
+架构比较清晰的告诉了我们哪些ceph节点需要部署inkscope的哪些组件。
 
 **二、部署**
+
+下面是我测试的部署步骤，期间也遇到了一些坑，在下一小节会给大家说明，当然时间有些长了，这些坑产生的现象可能记忆的不太清晰了，哈哈。
 
 **ceph-mon 节点**
 
