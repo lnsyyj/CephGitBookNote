@@ -20,7 +20,7 @@ https://github.com/inkscope
 
 2.inkscope-packaging，发布的deb包和rpm包，在这里可以找到老版本的inkscope包。
 
-3.collectd-ceph，这个项目是新版inkscope中添加的采集模块，把数据采集到influxdb中，前台调用influxdb的rest API展示图表。
+3.collectd-ceph，这个项目是新版inkscope中添加的采集模块，把数据采集到influxdb中，前台调用influxdb的rest API展示图表。这个后续系列我会再写一篇文章。
 
 **一、架构图**
 
