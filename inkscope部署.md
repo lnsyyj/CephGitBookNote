@@ -217,3 +217,25 @@ radosgw-admin caps add --uid=admin --caps="zone=*"
 
 打开浏览器，访问[http://192.168.18.106:8080/](http://192.168.18.106:8080/)
 
+三、部署中遇到的问题
+
+问题：
+
+1、rbd前台页面报keyring权限问题，修改/etc/ceph/的keyring权限为644，chmod +r \*
+
+2、无法匹配机器名
+
+mongo数据库中 "partition" : DBRef\("partitions", null\)
+
+`vi /opt/inkscope/bin/cephprobe.py`
+
+大概390行
+
+`osddatapartition = db.partitions.find_one({"_id" : {'$regex' : osdhostid+"*:*"}, "mountpoint" : '/var/lib/ceph/osd/'+clusterName+'-'+str(osd["osd"])})`
+
+3、ceph jewel版修改了mds，而inkscope项目没有更新，会导致前台主页面全部变灰
+
+J版返回json没有msdmap了，注释掉statusApp.js 的
+
+`$scope.mdsmap.up_standby = data.output.mdsmap["up:standby"];`
+
