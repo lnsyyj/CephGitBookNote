@@ -1,3 +1,15 @@
+Inkscope是管理和监控Ceph的项目。它依赖于ceph提供的API。使用python flask框架，使用mongoDB来存储sysprobe和cephprobe采集上来的监控数据。
+
+sysprobe：负责采集物理机的状态信息。
+
+cephprobe：负责采集ceph集群的状态信息，主要是调用ceph自身的ceph-rest-api服务。
+
+项目地址：
+
+```
+https://github.com/inkscope/inkscope
+```
+
 **一、架构图**
 
 ![](/assets/inkscope.png)
@@ -87,7 +99,6 @@ bindIp: 0.0.0.0
 （4）重启服务
 # service mongod stop
 # service mongod start
-
 ```
 
 **inkscope前后台节点**
@@ -164,11 +175,5 @@ ServerName ceph-01
 
 **各节点全部部署完后**
 
-Browser访问http://192.168.18.106:8080/
-
-
-
-
-
-
+Browser访问[http://192.168.18.106:8080/](http://192.168.18.106:8080/)
 
