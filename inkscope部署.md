@@ -66,7 +66,7 @@ keyring = /etc/ceph/ceph.client.admin.keyring
     "mongodb_host" : "192.168.18.106",
     "mongodb_user":"ceph",
     "mongodb_passwd":"ceph",
-（6）
+（6）启动probe监控程序
 /etc/init.d/sysprobe start
 /etc/init.d/cephprobe start
 ```
