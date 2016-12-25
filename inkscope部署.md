@@ -74,23 +74,24 @@ keyring = /etc/ceph/ceph.client.admin.keyring
 **ceph-osd 节点**
 
 ```
+（1）添加inkscope源
 vi /etc/apt/sources.list.d/inkscope.list
 添加
 官方源： deb https://raw.githubusercontent.com/inkscope/inkscope-packaging/master/DEBS ./
 # apt-get update
-（2）
+（2）安装依赖包
 # apt-get install python-pip  python-dev  sysstat  lshw
 # apt-get install inkscope-common  inkscope-sysprobe
 # pip install psutil==2.1.3
 # pip install pymongo==2.6.3
-（3）
+（3）修改inkscope配置文件
 # vi /opt/inkscope/etc/inkscope.conf
     "ceph_rest_api": "192.168.18.105:5000",
     "ceph_rest_api_subfolder": "",
     "mongodb_host" : "192.168.18.106",
     "mongodb_user":"ceph",
     "mongodb_passwd":"ceph",
-（4）
+（4）启动probe监控程序
 /etc/init.d/sysprobe start
 ```
 
@@ -125,11 +126,12 @@ bindIp: 0.0.0.0
 **inkscope前后台节点**
 
 ```
+（1）添加inkscope源
 vi /etc/apt/sources.list.d/inkscope.list
 添加
 官方源： deb https://raw.githubusercontent.com/inkscope/inkscope-packaging/master/DEBS ./
 # apt-get update
-（2）
+（2）安装依赖包
 # apt-get install inkscope-common   inkscope-admviz  apache2 
 # pip install flask-login simple-json
 # apt-get install libapache2-mod-wsgi
