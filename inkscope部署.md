@@ -32,11 +32,17 @@ https://github.com/inkscope
 
 下面是我测试的部署步骤，期间也遇到了一些坑，在下一小节会给大家说明，当然时间有些长了，这些坑产生的现象可能记忆的不太清晰了，哈哈。
 
+当然这些也是测试环境，如果部署在生产环境还需要根据自己的情况重新设计一下。
+
 系统版本：Ubuntu14.04 server
 
 ceph版本：jewel 10.2.3
 
 inkscope版本：1.4.0.2
+
+192.168.18.105节点是ceph-mon节点
+
+192.168.18.106节点是
 
 **ceph-mon 节点**
 
@@ -136,7 +142,7 @@ vi /etc/apt/sources.list.d/inkscope.list
 # pip install flask-login simple-json
 # apt-get install libapache2-mod-wsgi
 # pip install pymongo==2.6.3
-（3）
+（3）修改apache配置文件
 # vi /etc/apache2/ports.conf
 添加：
 Listen 8080
