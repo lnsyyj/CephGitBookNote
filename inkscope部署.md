@@ -14,7 +14,7 @@ https://github.com/inkscope/inkscope
 
 ![](/assets/inkscope.png)
 
-架构比较清晰，
+架构比较清晰的告诉了我们哪些物理节点需要部署inkscope的哪些服务，下面是我测试的部署步骤。
 
 **二、部署**
 
