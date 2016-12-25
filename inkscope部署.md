@@ -40,9 +40,9 @@ ceph版本：jewel 10.2.3
 
 inkscope版本：1.4.0.2
 
-192.168.18.105是ceph-mon节点同时也是ceph-osd节点
+机器名ceph-01，192.168.18.105是ceph-mon节点同时也是ceph-osd节点
 
-192.168.18.106是mongodb节点
+机器名ceph-02，192.168.18.106是mongodb节点、apache节点
 
 **ceph-mon 节点**
 
