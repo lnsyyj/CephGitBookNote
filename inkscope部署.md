@@ -233,7 +233,9 @@ mongo数据库中 "partition" : DBRef\("partitions", null\)
 
 `osddatapartition = db.partitions.find_one({"_id" : {'$regex' : osdhostid+"*:*"}, "mountpoint" : '/var/lib/ceph/osd/'+clusterName+'-'+str(osd["osd"])})`
 
-3、ceph jewel版修改了mds，而inkscope项目没有更新，会导致前台主页面全部变灰
+3、ceph jewel版修改了mds，而inkscope项目没有更新，会导致前台主页面全部变灰，无法填充cluster health、placement groups
+
+、osd等图表。
 
 J版返回json没有msdmap了，注释掉statusApp.js 的
 
