@@ -1,8 +1,8 @@
-Inkscope是管理和监控Ceph的项目。它依赖于ceph提供的API。使用python flask框架，使用mongoDB来存储sysprobe和cephprobe采集上来的监控数据。
+Inkscope是管理和监控Ceph的项目。它依赖于ceph提供的API。使用python flask框架，使用mongoDB来存储sysprobe和cephprobe采集上来的监控数据。前台页面的展示会调用ceph自身的ceph-rest-api服务。
 
 sysprobe：负责采集物理机的状态信息。
 
-cephprobe：负责采集ceph集群的状态信息，主要是调用ceph自身的ceph-rest-api服务。
+cephprobe：负责采集ceph集群的状态信息。
 
 项目地址：
 
@@ -13,6 +13,8 @@ https://github.com/inkscope/inkscope
 **一、架构图**
 
 ![](/assets/inkscope.png)
+
+架构比较清晰，
 
 **二、部署**
 
