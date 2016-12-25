@@ -183,11 +183,11 @@ ServerName ceph-01
     ErrorLog /var/log/inkscope/webserver_error.log
     CustomLog /var/log/inkscope/webserver_access.log common
 </VirtualHost>
-（4）
+（4）启用apache模块
 # sudo a2enmod proxy_http
 # sudo a2enmod rewrite
 # sudo a2ensite inkScope
-（5）
+（5）修改inkscope配置文件
 # vi /opt/inkscope/etc/inkscope.conf
     "ceph_rest_api": "192.168.18.105:5000",
     "ceph_rest_api_subfolder": "",
@@ -198,7 +198,7 @@ ServerName ceph-01
     "radosgw_admin": "admin",
     "radosgw_key": "U78Y9WSV96QT9SOUT4S6",
     "radosgw_secret": "tgwkKsvMfdsw47mk1a96iMvFDMTga4xHkDmCZ34b"
-（6）
+（6）重启apache
 # service apache2 restart
 ```
 
@@ -240,6 +240,4 @@ mongo数据库中 "partition" : DBRef\("partitions", null\)
 J版返回json没有msdmap了，注释掉statusApp.js 的
 
 `$scope.mdsmap.up_standby = data.output.mdsmap["up:standby"];`
-
-
 
