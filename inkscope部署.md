@@ -202,6 +202,8 @@ ServerName ceph-01
 # service apache2 restart
 ```
 
+配置rados gateway时，需要手动创建一个账号，并赋予相应的caps。
+
 **各节点全部部署完后**
 
 Browser访问[http://192.168.18.106:8080/](http://192.168.18.106:8080/)
