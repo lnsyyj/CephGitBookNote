@@ -179,7 +179,7 @@ ServerName ceph-01
     # alert, emerg.
     LogLevel warn
     ProxyRequests Off
-    ProxyPass /ceph-rest-api/ http://192.168.18.101:5000/api/v0.1/
+    ProxyPass /ceph-rest-api/ http://192.168.18.105:5000/api/v0.1/
     ErrorLog /var/log/inkscope/webserver_error.log
     CustomLog /var/log/inkscope/webserver_access.log common
 </VirtualHost>
