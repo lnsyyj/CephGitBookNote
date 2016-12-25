@@ -16,7 +16,7 @@ https://github.com/inkscope/inkscope
 https://github.com/inkscope
 ```
 
-1.inkscope，主项目，也就是我们介绍的inkscope的源码。
+1.inkscope，主项目，inkscope的源码。
 
 2.inkscope-packaging，发布的deb包和rpm包，在这里可以找到老版本的inkscope包。
 
