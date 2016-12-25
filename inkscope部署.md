@@ -10,6 +10,18 @@ cephprobe：负责采集ceph集群的状态信息。
 https://github.com/inkscope/inkscope
 ```
 
+在inkscope的github页中有3个项目
+
+```
+https://github.com/inkscope
+```
+
+1.inkscope，主项目，也就是我们介绍的inkscope的源码。
+
+2.inkscope-packaging，发布的deb包和rpm包，在这里可以找到老版本的inkscope包。
+
+3.collectd-ceph，这个项目是新版inkscope中添加的采集模块，把数据采集到influxdb中，前台调用influxdb的rest API展示图表。
+
 **一、架构图**
 
 ![](/assets/inkscope.png)
@@ -19,6 +31,10 @@ https://github.com/inkscope/inkscope
 **二、部署**
 
 下面是我测试的部署步骤，期间也遇到了一些坑，在下一小节会给大家说明，当然时间有些长了，这些坑产生的现象可能记忆的不太清晰了，哈哈。
+
+ceph版本：jewel 10.2.3
+
+inkscope版本：1.4.0.2
 
 **ceph-mon 节点**
 
