@@ -241,3 +241,5 @@ J版返回json没有msdmap了，注释掉statusApp.js 的
 
 `$scope.mdsmap.up_standby = data.output.mdsmap["up:standby"];`
 
+
+
