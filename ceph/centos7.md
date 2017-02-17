@@ -16,5 +16,13 @@ git clone https://github.com/ceph/ceph.git
 ./install-deps.sh
 ```
 
+4.查看branch和tag，并切换branch或tag
+
+```
+git branch -a
+git tag -l
+git checkout v12.0.0
+```
+
 
 
