@@ -9,4 +9,7 @@
 * [inkscope踩过的坑](inkscope踩过的坑.md)
 * [inkscope集成influxDB ---新版](inkscope集成influxdb----新版.md)
 * [inkscope介绍与部署](inkscope部署.md)
+* [Ceph开发](ceph.md)
+  * [Ubuntu1604Server](ceph/ubuntu1604.md)
+  * CentOS7
 
