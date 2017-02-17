@@ -8,5 +8,11 @@
 git clone https://github.com/ceph/ceph.git
 ```
 
+3.安装依赖
+
+```
+./install-deps.sh
+```
+
 
 
