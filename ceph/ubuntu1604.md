@@ -1,3 +1,5 @@
+一、GitHub下载源码方式
+
 1.安装git
 
 `apt-get install git`
@@ -30,7 +32,7 @@ git checkout v12.0.0
 ./do_cmake.sh
 ```
 
-# **二、下载源码方式**
+# **二、下载tarballs方式**
 
 ```
 wget https://download.ceph.com/tarballs/ceph-12.0.0.tar.gz
