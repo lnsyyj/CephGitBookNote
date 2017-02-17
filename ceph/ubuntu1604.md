@@ -22,5 +22,11 @@ git tag -l
 git checkout v12.0.0
 ```
 
+5.生成Makefile
+
+```
+./do_cmake.sh
+```
+
 
 
