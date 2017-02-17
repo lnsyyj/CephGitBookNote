@@ -11,5 +11,5 @@
 * [inkscope介绍与部署](inkscope部署.md)
 * [Ceph开发](ceph.md)
   * [Ubuntu1604Server](ceph/ubuntu1604.md)
-  * CentOS7
+  * [CentOS7](ceph/centos7.md)
 
