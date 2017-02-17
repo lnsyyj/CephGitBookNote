@@ -10,7 +10,7 @@ yum install git
 git clone https://github.com/ceph/ceph.git
 ```
 
-3.安装依赖
+3.安装依赖（在master分支执行）
 
 ```
 ./install-deps.sh
