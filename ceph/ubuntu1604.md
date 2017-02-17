@@ -32,3 +32,15 @@ git checkout v12.0.0
 
 
 
+
+
+下载源码：
+
+```
+wget https://download.ceph.com/tarballs/ceph-12.0.0.tar.gz
+tar zxvf ceph-12.0.0.tar.gz
+./run-make-check.sh
+```
+
+
+
