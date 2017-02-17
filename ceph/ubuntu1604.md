@@ -38,7 +38,7 @@ tar zxvf ceph-12.0.0.tar.gz
 ./run-make-check.sh
 ./do_cmake.sh -j 4
 cd build/
-cmake -j 4
+make -j 4
 ```
 
 
