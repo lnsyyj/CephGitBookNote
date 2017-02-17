@@ -30,11 +30,7 @@ git checkout v12.0.0
 ./do_cmake.sh
 ```
 
-
-
-
-
-下载源码：
+# **二、下载源码方式**
 
 ```
 wget https://download.ceph.com/tarballs/ceph-12.0.0.tar.gz
