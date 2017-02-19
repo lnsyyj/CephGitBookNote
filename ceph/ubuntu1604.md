@@ -15,6 +15,7 @@ git submodule update --init --recursive
 
 ```
 ./install-deps.sh
+sudo apt-get install cmake
 ```
 
 4.查看branch和tag，并切换branch或tag
