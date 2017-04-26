@@ -14,7 +14,8 @@
   * [CentOS7](ceph/centos7.md)
 * [Ceph代码review](cephdai-ma-review.md)
   * [radosgateway](cephdai-ma-review/radosgate-way.md)
-* [L版](lban.md)
+* [ceph version 12.0.1 Luminous](lban.md)
   * [管理CLI](lban/guan-li-cli.md)
     * [OPERATING A CLUSTER](lban/guan-li-cli/operating-a-cluster.md)
+  * [RBD](lban/rbd.md)
 
