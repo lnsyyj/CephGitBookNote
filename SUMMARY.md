@@ -18,4 +18,5 @@
   * [管理CLI](lban/guan-li-cli.md)
     * [OPERATING A CLUSTER](lban/guan-li-cli/operating-a-cluster.md)
   * [RBD](lban/rbd.md)
+    * [KRBD](lban/rbd/krbd.md)
 
