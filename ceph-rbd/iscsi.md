@@ -13,6 +13,7 @@ https://github.com/fujita/tgt
 #### Adding Support for RBD to stgt
 
 ```
+原文
 http://ceph.com/dev-notes/adding-support-for-rbd-to-stgt/
 ```
 
@@ -52,6 +53,7 @@ tgtadm --lld iscsi --op bind --mode target --tid 1 -I ALL
 iscsiadm -m discovery -t st -p localhost
 6、登录节点，这将创建一个/dev/sdX块设备
 iscsiadm -m node --login
+7、
 ```
 
 
