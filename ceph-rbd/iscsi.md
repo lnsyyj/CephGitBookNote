@@ -46,6 +46,12 @@ tgtadm或tgtd将通过默认的Ceph配置文件(/etc/ceph/$cluster.conf,$cluster
 tgtadm --lld iscsi --mode target --op new --tid 1 --targetname rbd
 3、创建一个LUN在这个target上并且绑定到rbd image
 tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --backing-store iscsi-image --bstype rbd
+4、允许访问LUN
+tgtadm --lld iscsi --op bind --mode target --tid 1 -I ALL
+5、验证image可以被本地iscsi initiator看到
+iscsiadm -m discovery -t st -p localhost
+6、登录节点，这将创建一个/dev/sdX块设备
+iscsiadm -m node --login
 ```
 
 
