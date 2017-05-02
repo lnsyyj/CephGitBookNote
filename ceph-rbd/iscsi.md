@@ -29,7 +29,7 @@ tgtd为了支持rbd必须使用CEPH\_RBD flag来构建，您可能需要从源�
 tgtadm --lld iscsi --mode system --op show
 tgtd由tgtadm命令配置，需要选择一个RBD image作为tgtd instance的后端存储，您可以使用：
 --bstype <type>，type指定rbd选项来告诉tgtd应该使用bs_rbd访问存储
---backing-store <path>，选项以常用的Ceph语法选择rbd image，例如：--backing-store [pool/]image[@snap]来选择一个名为"image"的rbd image
+--backing-store <path>，选项以常用的Ceph语法选择rbd image，例如：--backing-store [pool/]image[@snap]来选择一个名为"image"的rbd image，pool可选，snapshot可选
 ```
 
 
