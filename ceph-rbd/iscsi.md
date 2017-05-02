@@ -10,7 +10,5 @@ http://ceph.com/dev-notes/updates-to-ceph-tgt-iscsi-support/
 http://stgt.sourceforge.net/
 ```
 
-以下为上述链接的文章简单翻译，翻译水平有限，还请参照原文
 
-Ceph Adding Support for RBD to stgt
 
