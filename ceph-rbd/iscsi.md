@@ -34,5 +34,16 @@ tgtd由tgtadm命令配置，需要选择一个RBD image作为tgtd instance的后
 你必须给device创建一个名字，典型的名称格式为：iqn.<year>-<month>.<domain>:<domain-specified-string>，这个格式不是必须的，可根据自己的习惯
 ```
 
+##### Using bs\_rbd with tgtd
+
+使用手动命令：
+
+```
+1、首先，在Ceph集群中创建一个image（一个500MB的image，名称为iscsi-image）
+rbd create iscsi-image --size 500
+tgtadm或tgtd将通过默认的Ceph配置文件(/etc/ceph/$cluster.conf,$cluster默认为ceph)提供的配置访问Ceph集群，或通过CEPH_CONF environment variable，确保您的配置可通过其中一个设置访问
+
+```
+
 
 
