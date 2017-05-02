@@ -42,7 +42,10 @@ tgtd由tgtadm命令配置，需要选择一个RBD image作为tgtd instance的后
 1、首先，在Ceph集群中创建一个image（一个500MB的image，名称为iscsi-image）
 rbd create iscsi-image --size 500
 tgtadm或tgtd将通过默认的Ceph配置文件(/etc/ceph/$cluster.conf,$cluster默认为ceph)提供的配置访问Ceph集群，或通过CEPH_CONF environment variable，确保您的配置可通过其中一个设置访问
-
+2、接下来，为tgtd守护进程创建一个新的target来模拟（截至2013年7月16日，由于不清楚的原因，你不能使用tid 0）
+tgtadm --lld iscsi --mode target --op new --tid 1 --targetname rbd
+3、创建一个LUN在这个target上并且绑定到rbd image
+tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --backing-store iscsi-image --bstype rbd
 ```
 
 
