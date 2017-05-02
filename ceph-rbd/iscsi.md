@@ -22,3 +22,10 @@ http://ceph.com/dev-notes/adding-support-for-rbd-to-stgt/
 
 tgtd为了支持rbd必须使用CEPH\_RBD flag来构建，您可能需要从源代码自己构建它
 
+```
+您可以使用命令检查是否存在支持
+tgtadm --lld iscsi --mode system --op show
+```
+
+
+
