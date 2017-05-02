@@ -31,6 +31,7 @@ tgtd由tgtadm命令配置，需要选择一个RBD image作为tgtd instance的后
 --bstype <type>，type指定rbd选项来告诉tgtd应该使用bs_rbd访问存储
 --backing-store <path>，选项以常用的Ceph语法选择rbd image，例如：--backing-store [pool/]image[@snap]来选择一个名为"image"的rbd image，pool可选，snapshot可选
 您可以使用rbd command-line tool创建image
+你必须给device创建一个名字，典型的名称格式为：iqn.<year>-<month>.<domain>:<domain-specified-string>，这个格式不是必须的，可根据自己的习惯
 ```
 
 
