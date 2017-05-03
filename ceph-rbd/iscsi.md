@@ -128,7 +128,7 @@ root@ubuntu:~# iscsiadm -m discovery -t st -p localhost
 root@ubuntu:~# iscsiadm -m node --login
 10、这时，在ubuntu下多了一块sdc
 root@ubuntu:~# ll /dev/sd
-sda   sda1  sda2  sda5  sdb   sdb1  sdb2  sdc   
+sda   sda1  sda2  sda5  sdb   sdb1  sdb2  sdc
 ```
 
 
