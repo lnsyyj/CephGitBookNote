@@ -102,5 +102,16 @@ root@ubuntu1604:~# tgtadm --help
 Linux SCSI Target administration utility, version 1.0.63
 ```
 
+实验步骤：
+
+```
+1、创建两个测试pool
+root@ubuntu:~# ceph osd pool create iscsi-test-pool-1 64 64
+root@ubuntu:~# ceph osd pool create iscsi-test-pool-2 64 64
+2、在iscsi-test-pool-1这个pool中创建两个rbd image
+root@ubuntu:~# rbd create iscsi-test-pool-1/iscsi-rbd-image-1 --size 5
+root@ubuntu:~# rbd create iscsi-test-pool-1/iscsi-rbd-image-2 --size 5
+```
+
 
 
