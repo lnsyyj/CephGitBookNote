@@ -85,7 +85,7 @@ conf=<path-to-ceph.conf> 允许您为每个image引用不同的ceph集群（每�
 id=<client-id> 允许每个image使用不同的ceph 客户端id，这允许为每个image配置不同的客户端（包括permissions、log settings、rbd cache settings等），一般完整的客户端名字是"client.<client-id>"(默认id是admin,默认的客户端名称为"client.admin")
 例如：
 tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --bstype rbd --backing-store public-image --bsopts "conf=/etc/ceph/pubcluster.conf;id=public"
-你可以在"pubcluster"集群为名字是"public-image"的image创建target
+你可以在"pubcluster"集群为名字是"public-image"的image创建target，ceph auth list中的名字是"client.public"
 ```
 
 #### Ubuntu1604
