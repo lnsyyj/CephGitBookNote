@@ -88,6 +88,12 @@ tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --bstype rbd --ba
 你可以在"pubcluster"集群为名字是"public-image"的image创建target，ceph auth list中的名字是"client.public"
 ```
 
+#### 您可以从以下网站获取支持Ceph rbd的Debian和RPM 包
+
+```
+http://ceph.com/packages/ceph-extras
+```
+
 #### Ubuntu1604
 
 ```
