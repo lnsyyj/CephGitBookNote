@@ -61,5 +61,12 @@ iscsiadm -m node --logout
 
 ##### Details of the bs\_rbd backing-store driver, possible future work
 
-作为首次实现，作者实现了bs\_rbd driver 来处理多达20个并发的rbd image，并使用bs\_rdwr模块作为开始，以便I/O与RADOS集群同步。但是tgtd本身维护一个worker线程pool，默认情况下是16个线程
+driver与librbd和librados相连，必须安装librbd和librados库，必须选择配置选项CEPH\_RBD
+
+```
+例如：
+make CEPH_RBD=1
+```
+
+
 
