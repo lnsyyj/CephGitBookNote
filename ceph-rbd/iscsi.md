@@ -3,7 +3,6 @@
 ```
 参考
 http://www.open-iscsi.org/
-
 # tgt project
 http://stgt.sourceforge.net/
 https://github.com/fujita/tgt
