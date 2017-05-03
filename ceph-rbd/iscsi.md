@@ -98,6 +98,7 @@ http://ceph.com/packages/ceph-extras
 ```
 1.源安装
 root@ubuntu:~# apt-get install tgt
+root@ubuntu:~# apt-get install tgt-rbd 
 root@ubuntu1604:~# tgtadm --help
 Linux SCSI Target administration utility, version 1.0.63
 ```
