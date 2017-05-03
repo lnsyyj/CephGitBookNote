@@ -74,5 +74,12 @@ make CEPH_RBD=1
 http://ceph.com/dev-notes/updates-to-ceph-tgt-iscsi-support/
 ```
 
+Ubuntu1604
+
+```
+root@Ubuntu1604FIO2:~# tgtadm --help
+Linux SCSI Target administration utility, version 1.0.63
+```
+
 
 
