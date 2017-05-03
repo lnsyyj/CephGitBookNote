@@ -111,6 +111,10 @@ root@ubuntu:~# ceph osd pool create iscsi-test-pool-2 64 64
 2、在iscsi-test-pool-1这个pool中创建两个rbd image
 root@ubuntu:~# rbd create iscsi-test-pool-1/iscsi-rbd-image-1 --size 5
 root@ubuntu:~# rbd create iscsi-test-pool-1/iscsi-rbd-image-2 --size 5
+3、
+root@ubuntu:~# tgtadm --lld iscsi --mode target --op new --tid 1 --targetname iscsi-rbd-target-1
+4、查询target信息
+root@ubuntu:~# tgtadm --lld iscsi --mode target --op show
 ```
 
 
