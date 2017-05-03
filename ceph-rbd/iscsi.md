@@ -53,7 +53,8 @@ tgtadm --lld iscsi --op bind --mode target --tid 1 -I ALL
 iscsiadm -m discovery -t st -p localhost
 6、登录节点，这将创建一个/dev/sdX块设备
 iscsiadm -m node --login
-7、
+7、现在您可以使用iSCSI访问本地/dev/sdX设备了
+
 ```
 
 
