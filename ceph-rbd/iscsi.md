@@ -120,6 +120,15 @@ root@ubuntu:~# tgtadm --lld iscsi --mode system --op show
 root@ubuntu:~# tgtadm --lld iscsi --mode target --op show
 6、
 root@ubuntu:~# tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --backing-store iscsi-test-pool-1/iscsi-rbd-image-1 --bstype rbd
+7、
+root@ubuntu:~# tgtadm --lld iscsi --op bind --mode target --tid 1 -I ALL
+8、
+root@ubuntu:~# iscsiadm -m discovery -t st -p localhost
+9、
+root@ubuntu:~# iscsiadm -m node --login
+10、这时，在ubuntu下多了一块sdc
+root@ubuntu:~# ll /dev/sd
+sda   sda1  sda2  sda5  sdb   sdb1  sdb2  sdc   
 ```
 
 
