@@ -59,5 +59,9 @@ iscsiadm -m node --login
 iscsiadm -m node --logout
 ```
 
+Details of the bs\_rbd backing-store driver, possible future work
+
+
+
 
 
