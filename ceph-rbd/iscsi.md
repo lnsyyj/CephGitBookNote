@@ -3,8 +3,7 @@
 ```
 参考
 http://www.open-iscsi.org/
-# Updates to Ceph tgt (iSCSI) support
-http://ceph.com/dev-notes/updates-to-ceph-tgt-iscsi-support/
+
 # tgt project
 http://stgt.sourceforge.net/
 https://github.com/fujita/tgt
@@ -17,7 +16,9 @@ https://github.com/fujita/tgt
 http://ceph.com/dev-notes/adding-support-for-rbd-to-stgt/
 ```
 
-可以使用RADOS block device \(rbd\) image作为iSCSI target device的存储后端
+```
+可以使用RADOS block device (rbd) image作为iSCSI target device的存储后端
+```
 
 ##### The bs\_rbd backing-store driver
 
@@ -66,6 +67,14 @@ driver与librbd和librados相连，必须安装librbd和librados库，必须选�
 ```
 例如：
 make CEPH_RBD=1
+```
+
+#### Updates to Ceph tgt \(iSCSI\) support
+
+```
+原文
+http://ceph.com/dev-notes/updates-to-ceph-tgt-iscsi-support/
+
 ```
 
 
