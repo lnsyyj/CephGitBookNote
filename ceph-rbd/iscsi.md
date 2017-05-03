@@ -93,7 +93,7 @@ tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --bstype rbd --ba
 http://ceph.com/packages/ceph-extras
 ```
 
-#### Ubuntu1604
+#### Ubuntu1604测试tgt iscsi
 
 ```
 1.源安装
@@ -114,8 +114,12 @@ root@ubuntu:~# rbd create iscsi-test-pool-1/iscsi-rbd-image-1 --size 5
 root@ubuntu:~# rbd create iscsi-test-pool-1/iscsi-rbd-image-2 --size 5
 3、创建一个target
 root@ubuntu:~# tgtadm --lld iscsi --mode target --op new --tid 1 --targetname iscsi-rbd-target-1
-4、查询target信息
+4、检查是否支持rbd，不支持安装tgt-rbd
+root@ubuntu:~# tgtadm --lld iscsi --mode system --op show
+5、查询target信息
 root@ubuntu:~# tgtadm --lld iscsi --mode target --op show
+6、
+root@ubuntu:~# tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --backing-store iscsi-test-pool-1/iscsi-rbd-image-1 --bstype rbd
 ```
 
 
