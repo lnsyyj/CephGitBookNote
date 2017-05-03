@@ -54,7 +54,7 @@ iscsiadm -m discovery -t st -p localhost
 6、登录节点，这将创建一个/dev/sdX块设备
 iscsiadm -m node --login
 7、现在您可以使用iSCSI访问本地/dev/sdX设备了
-您可以从不同的网络主机执行5和6步, 只需要修改 -p <tgtd-hostname>
+您可以从不同的网络主机执行5和6步, 只需要修改 -p <tgtd-hostname> 参数
 8、完成后，您可以终止会话并删除device
 iscsiadm -m node --logout
 ```
