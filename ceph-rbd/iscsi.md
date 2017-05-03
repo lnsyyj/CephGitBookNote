@@ -77,9 +77,11 @@ http://ceph.com/dev-notes/updates-to-ceph-tgt-iscsi-support/
 Ubuntu1604
 
 ```
-root@Ubuntu1604FIO2:~# tgtadm --help
+root@ubuntu1604:~# tgtadm --help
 Linux SCSI Target administration utility, version 1.0.63
 ```
 
+tgt-admin可以与rbd后端bs\_rbd一起使用
 
+tgt-admin用于从target-configuration file设置tgtd，通常在引导时使用，所以这使得在主机上映射持久性targets 更为方便
 
