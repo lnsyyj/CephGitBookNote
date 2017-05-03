@@ -18,3 +18,7 @@ rados gateway相关：
 
 `https://github.com/cannium/Sree`
 
+rbd相关：
+
+`https://github.com/fujita/tgt`
+
