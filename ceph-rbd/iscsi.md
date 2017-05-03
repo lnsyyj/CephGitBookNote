@@ -118,13 +118,13 @@ root@ubuntu:~# tgtadm --lld iscsi --mode target --op new --tid 1 --targetname is
 root@ubuntu:~# tgtadm --lld iscsi --mode system --op show
 5、查询target信息
 root@ubuntu:~# tgtadm --lld iscsi --mode target --op show
-6、
+6、创建一个LUN在这个target上并且绑定到rbd image
 root@ubuntu:~# tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --backing-store iscsi-test-pool-1/iscsi-rbd-image-1 --bstype rbd
-7、
+7、允许访问LUN
 root@ubuntu:~# tgtadm --lld iscsi --op bind --mode target --tid 1 -I ALL
-8、
+8、验证image可以被本地iscsi initiator看到
 root@ubuntu:~# iscsiadm -m discovery -t st -p localhost
-9、
+9、登录节点，这将创建一个/dev/sdX块设备
 root@ubuntu:~# iscsiadm -m node --login
 10、这时，在ubuntu下多了一块sdc
 root@ubuntu:~# ll /dev/sd
