@@ -55,6 +55,8 @@ iscsiadm -m discovery -t st -p localhost
 iscsiadm -m node --login
 7、现在您可以使用iSCSI访问本地/dev/sdX设备了
 
+8、完成后，您可以终止会话并删除device
+iscsiadm -m node --logout
 ```
 
 
