@@ -77,6 +77,8 @@ http://ceph.com/dev-notes/updates-to-ceph-tgt-iscsi-support/
 #### Ubuntu1604
 
 ```
+1.源安装
+root@ubuntu:~# apt-get install tgt
 root@ubuntu1604:~# tgtadm --help
 Linux SCSI Target administration utility, version 1.0.63
 ```
@@ -86,4 +88,12 @@ tgt-admin可以与rbd后端bs\_rbd一起使用
 tgt-admin用于从target-configuration file设置tgtd，通常在引导时使用，所以这使得在主机上映射持久性targets 更为方便
 
 tgtadm 接受一个新的参数--bsopts &lt;bs options&gt;为每个映射的image去设置bs\_rbd 选项
+
+```
+conf=<path-to-ceph.conf> 允许您为每个image引用不同的ceph集群（每个image都有自己的集群连接）
+id=<client-id> 允许每个image使用不同的ceph 客户端id，这允许为每个image配置不同的客户端（包括permissions、log settings、rbd cache settings等）
+
+```
+
+
 
