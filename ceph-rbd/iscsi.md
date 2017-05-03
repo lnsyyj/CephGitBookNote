@@ -91,8 +91,7 @@ tgtadm 接受一个新的参数--bsopts &lt;bs options&gt;为每个映射的imag
 
 ```
 conf=<path-to-ceph.conf> 允许您为每个image引用不同的ceph集群（每个image都有自己的集群连接）
-id=<client-id> 允许每个image使用不同的ceph 客户端id，这允许为每个image配置不同的客户端（包括permissions、log settings、rbd cache settings等）
-
+id=<client-id> 允许每个image使用不同的ceph 客户端id，这允许为每个image配置不同的客户端（包括permissions、log settings、rbd cache settings等），一般完整的客户端名字是"client.<client-id>"(默认id是admin,默认的客户端名称为"client.admin")
 ```
 
 
