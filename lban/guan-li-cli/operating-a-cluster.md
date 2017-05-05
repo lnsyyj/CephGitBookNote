@@ -6,13 +6,12 @@ sudo systemctl start ceph-mon.target
 
 Pool管理
 
-
-
 ```
-
 1.创建pool
 ceph osd pool create {pool-name} {pg-num} [{pgp-num}] [replicated] [crush-ruleset-name] [expected-num-objects]
-2.调整Pool副本数
+2.删除pool
+ceph osd pool delete {pool-name} [{pool-name} --yes-i-really-really-mean-it]
+3.调整Pool副本数
 ceph osd pool set {poolname} size {num-replicas}
 ```
 
