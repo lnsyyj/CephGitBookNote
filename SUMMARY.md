@@ -21,4 +21,5 @@
     * [KRBD](lban/rbd/krbd.md)
 * [Ceph RBD](ceph-rbd.md)
   * [iSCSI](ceph-rbd/iscsi.md)
+  * [RBD Operating](ceph-rbd/rbd-operating.md)
 
