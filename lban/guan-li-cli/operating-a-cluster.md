@@ -12,5 +12,14 @@ Pool管理
 ceph osd pool set {poolname} size {num-replicas}
 ```
 
+移除OSD
+
+```
+1.登录到osd所在节点
+ceph osd out osd.{osd-num}
+sudo systemctl stop ceph-osd@{osd-num}
+
+```
+
 
 
