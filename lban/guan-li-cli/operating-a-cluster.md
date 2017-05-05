@@ -18,7 +18,9 @@ ceph osd pool set {poolname} size {num-replicas}
 1.登录到osd所在节点
 ceph osd out osd.{osd-num}
 sudo systemctl stop ceph-osd@{osd-num}
-
+ceph osd crush remove {osd-name.osd-num}
+ceph auth del osd.{osd-num}
+ceph osd rm {osd-num}
 ```
 
 
