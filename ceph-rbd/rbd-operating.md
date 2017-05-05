@@ -1,5 +1,3 @@
-
-
 向RBD中读写数据
 
 KRBD
@@ -11,10 +9,7 @@ modprobe rbd
 modinfo rbd
 3. 创建一个5G的块设备
 rbd create test-pool-1 --size 5120
-
 ```
-
-
 
 
 
