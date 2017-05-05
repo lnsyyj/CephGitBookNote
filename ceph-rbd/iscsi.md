@@ -1,6 +1,8 @@
 # iSCSI
 
 ```
+博客
+http://www.sysnote.org/2017/04/21/three-iscsitargets-io-flow/
 参考
 http://www.open-iscsi.org/
 # tgt project
