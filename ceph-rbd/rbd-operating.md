@@ -9,6 +9,13 @@ modprobe rbd
 modinfo rbd
 3. 创建一个5G的块设备
 rbd create test-krbd --size 5120
+4.
+5.
+6.
+7.
+8.
+9.
+10.
 ```
 
 
