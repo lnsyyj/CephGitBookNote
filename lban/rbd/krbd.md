@@ -19,7 +19,7 @@ KRBD
 modprobe rbd
 2. 查看RBD模块信息
 modinfo rbd
-3. 创建一个5G的块设备,有些操作系统kernel不支持format 2格式某些新特性，需要关掉(特性：layering、striping、exclusive-lock、object-map、fast-diff、deep-flatten、journaling)
+3. 创建一个5G的块设备,有些操作系统kernel不支持format 2格式某些新特性，需要关掉
 rbd create <pool-name>/<rbd-name> --size 5120 --image-feature layering
 4.查看创建的块设备
 rbd list
@@ -27,7 +27,7 @@ rbd list
 rbd info <rbd-name>
 6.
 rbd map <pool-name>/<rbd-name>
-挂载失败
+关闭某些特性(特性：layering、striping、exclusive-lock、object-map、fast-diff、deep-flatten、journaling)
 rbd feature disable <pool-name>/<rbd-name> exclusive-lock object-map fast-diff deep-flatten
 7.
 8.
