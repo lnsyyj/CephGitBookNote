@@ -8,7 +8,7 @@ modprobe rbd
 2. 查看RBD模块信息
 modinfo rbd
 3. 创建一个5G的块设备
-rbd create test-pool-1 --size 5120
+rbd create test-krbd --size 5120
 ```
 
 
