@@ -26,7 +26,7 @@ rbd list
 5.查看RBD信息
 rbd info <rbd-name>
 6.
-rbd map <rbd-name>
+rbd map <pool-name>/<rbd-name>
 
 7.
 8.
