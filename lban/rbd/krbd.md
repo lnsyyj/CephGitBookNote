@@ -31,7 +31,8 @@ rbd map test-krbd
 7.
 8.
 9.
-10.
+10.删除RBD
+rbd rm <pool-name>/<rbd-name>
 ```
 
 
