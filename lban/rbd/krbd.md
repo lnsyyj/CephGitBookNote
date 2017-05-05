@@ -19,7 +19,7 @@ KRBD
 modprobe rbd
 2. 查看RBD模块信息
 modinfo rbd
-3. 创建一个5G的块设备,有些操作系统kernel不支持format 2格式某些新特性，需要关掉
+3. 创建一个5G的块设备,有些操作系统kernel不支持format 2格式某些新特性，需要关掉(layering、striping、exclusive-lock、object-map、fast-diff、deep-flatten、journaling)
 rbd create <pool-name>/<rbd-name> --size 5120 --image-feature layering
 4.查看创建的块设备
 rbd list
