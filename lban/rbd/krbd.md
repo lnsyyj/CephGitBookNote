@@ -27,7 +27,8 @@ rbd list
 rbd info <rbd-name>
 6.
 rbd map <pool-name>/<rbd-name>
-
+挂载失败
+rbd feature disable <pool-name>/<rbd-name> exclusive-lock object-map fast-diff deep-flatten
 7.
 8.
 9.
