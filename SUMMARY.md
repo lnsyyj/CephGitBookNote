@@ -19,5 +19,5 @@
 * [Ceph RBD](ceph-rbd.md)
   * [iSCSI](ceph-rbd/iscsi.md)
 * [MonitoringAndManagementPlatform](cephmonitoringandmanagementplatform.md)
-  * [1.](cephmonitoringandmanagementplatform/1.md)
+  * [1.](monitoringandmanagementplatform/inkscope部署.md)
 
