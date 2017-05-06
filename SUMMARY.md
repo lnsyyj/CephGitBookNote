@@ -19,6 +19,6 @@
     * [OPERATING A CLUSTER](lban/guan-li-cli/operating-a-cluster.md)
   * [RBD](lban/rbd.md)
     * [KRBD](lban/rbd/krbd.md)
-* [Ceph RBD](ceph-rbd.md)
+* [Ceph RBD](lban.md)
   * [iSCSI](ceph-rbd/iscsi.md)
 
