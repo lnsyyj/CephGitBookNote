@@ -18,5 +18,5 @@
     * [KRBD](lban/rbd/krbd.md)
 * [Ceph RBD](ceph-rbd.md)
   * [iSCSI](ceph-rbd/iscsi.md)
-* [CephMonitoringAndManagementPlatform](cephmonitoringandmanagementplatform.md)
+* [MonitoringAndManagementPlatform](cephmonitoringandmanagementplatform.md)
 
