@@ -18,4 +18,8 @@
     * [KRBD](lban/rbd/krbd.md)
 * [Ceph RBD](ceph-rbd.md)
   * [iSCSI](ceph-rbd/iscsi.md)
+* [Ceph监控项目](cephjian-kong-xiang-mu.md)
+  * [inkscope部署](inkscope部署.md)
+  * [inkscope集成influxdb----新版](inkscope集成influxdb----新版.md)
+  * [inkscope踩过的坑](inkscope踩过的坑.md)
 
