@@ -19,4 +19,5 @@
 * [Ceph RBD](ceph-rbd.md)
   * [iSCSI](ceph-rbd/iscsi.md)
 * [MonitoringAndManagementPlatform](cephmonitoringandmanagementplatform.md)
+  * [1.](cephmonitoringandmanagementplatform/1.md)
 
