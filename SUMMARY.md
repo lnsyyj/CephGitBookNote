@@ -18,6 +18,4 @@
     * [KRBD](lban/rbd/krbd.md)
 * [Ceph RBD](ceph-rbd.md)
   * [iSCSI](ceph-rbd/iscsi.md)
-* [MonitoringAndManagementPlatform](cephmonitoringandmanagementplatform.md)
-  * [1.](monitoringandmanagementplatform/inkscope部署.md)
 
