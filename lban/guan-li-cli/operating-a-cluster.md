@@ -1,9 +1,9 @@
 monitor管理
 
 ```
-1.启动monitor
+1.启动monitor进程
 sudo systemctl start ceph-mon.target
-2.停止monitor
+2.停止monitor进程
 sudo systemctl stop ceph-mon.target
 ```
 
@@ -28,6 +28,13 @@ sudo systemctl stop ceph-osd@{osd-num}
 ceph osd crush remove {osd-name.osd-num}
 ceph auth del osd.{osd-num}
 ceph osd rm {osd-num}
+```
+
+启动OSD
+
+```
+1.启动OSD进程
+sudo systemctl start ceph-osd@{osd-num}
 ```
 
 
