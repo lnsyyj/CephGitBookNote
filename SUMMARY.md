@@ -22,4 +22,5 @@
   * [inkscope部署](inkscope部署.md)
   * [inkscope集成influxdb----新版](inkscope集成influxdb----新版.md)
   * [inkscope踩过的坑](inkscope踩过的坑.md)
+* [Ceph对接KVM](cephdui-jie-kvm.md)
 
