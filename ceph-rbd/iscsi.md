@@ -139,15 +139,24 @@ sda   sda1  sda2  sda5  sdb   sdb1  sdb2  sdc
 参考文章：http://www.bkjia.com/yjs/1018700.html
 
 server node (192.168.30.128)
-
-root@ubuntu:~/Codes/Go/test/hello# rados lspools 
+1.添加源并安装tgt
+root@ubuntu:~# echo "deb http://ceph.com/packages/ceph-extras/debian $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/ceph-extras.list
+root@ubuntu:~# apt-get update 
+root@ubuntu:~# apt-get install tgt
+root@ubuntu:~# apt-get install tgt-rbd
+2.确认是否支持rbd
+root@ubuntu:~# tgtadm --lld iscsi --op show --mode system | grep rbd
+    rbd (bsoflags sync:direct)
+3.创建rbd并确认是否创建成功
+root@ubuntu:~# rbd create rbd/test_image --size 1024 --image-format 2
+root@ubuntu:~# rados lspools 
 rbd
-root@ubuntu:~/Codes/Go/test/hello# rbd ls rbd
+root@ubuntu:~# rbd ls rbd
 image-0
 image-1
 test_image
-
-root@ubuntu:~/Codes/Go/test/hello# cat /etc/tgt/targets.conf 
+4.在tgt服务中注册刚才创建好的image
+root@ubuntu:~# cat /etc/tgt/targets.conf 
 # Empty targets configuration file -- please see the package
 # documentation directory for an example.
 #
@@ -162,7 +171,13 @@ root@ubuntu:~/Codes/Go/test/hello# vi /etc/tgt/conf.d/ceph.conf
     backing-store rbd/test_image        # Format is <iscsi-pool>/<iscsi-rbd-image>
     initiator-address 192.168.30.129    #client address allowed to map the address
 </target>
-
+5.重新加载或重新启动tgt服务
+root@ubuntu:~# service tgt reload
+root@ubuntu:~# service tgt restart
+6.关闭rbd cache
+root@ubuntu:~# vim /etc/ceph/ceph.conf
+[client]
+rbd_cache = false
 
 
 client node (192.168.30.129)
