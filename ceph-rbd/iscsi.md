@@ -133,5 +133,46 @@ root@ubuntu:~# ll /dev/sd
 sda   sda1  sda2  sda5  sdb   sdb1  sdb2  sdc
 ```
 
+多HOST实验步骤
+
+```
+参考文章：http://www.bkjia.com/yjs/1018700.html
+
+server node
+
+
+
+client node
+1.安装open-iscsi
+root@ubuntu1604fio:~# apt-get install  open-iscsi
+2.重启open-iscsi服务
+root@ubuntu1604fio:~# service open-iscsi restart
+3.发现目标设备
+root@ubuntu1604fio:~# iscsiadm -m discovery -t st -p 192.168.30.128
+192.168.30.128:3260,1 iqn.2014-04.rbdstore.example.com:iscsi
+4.挂载目标设备
+root@ubuntu1604fio:~# iscsiadm -m node --login
+Logging in to [iface: default, target: iqn.2014-04.rbdstore.example.com:iscsi, portal: 192.168.30.128,3260] (multiple)
+Login to [iface: default, target: iqn.2014-04.rbdstore.example.com:iscsi, portal: 192.168.30.128,3260] successful.
+5.确认目标设备已挂载（sdc）
+root@ubuntu1604fio:~# lsblk
+NAME                         MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+fd0                            2:0    1    4K  0 disk 
+sda                            8:0    0   20G  0 disk 
+├─sda1                         8:1    0  487M  0 part /boot
+├─sda2                         8:2    0    1K  0 part 
+└─sda5                         8:5    0 19.5G  0 part 
+  ├─ubuntu1604fio--vg-root   252:0    0 17.5G  0 lvm  /
+  └─ubuntu1604fio--vg-swap_1 252:1    0    2G  0 lvm  [SWAP]
+sdb                            8:16   0   10G  0 disk 
+├─sdb1                         8:17   0    5G  0 part /var/lib/ceph/osd/ceph-1
+└─sdb2                         8:18   0    5G  0 part 
+sdc                            8:32   0    1G  0 disk 
+sr0                           11:0    1  667M  0 rom  
+
+
+
+```
+
 
 
