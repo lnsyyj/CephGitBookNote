@@ -121,7 +121,7 @@ root@ubuntu:~# tgtadm --lld iscsi --mode target --op new --tid 1 --targetname is
 root@ubuntu:~# tgtadm --lld iscsi --mode system --op show
 5、查询target信息
 root@ubuntu:~# tgtadm --lld iscsi --mode target --op show
-6、创建一个LUN在这个target上并且绑定到rbd image
+6、创建一个LUN(logicalunit)在这个target上并且绑定到rbd image
 root@ubuntu:~# tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 1 --backing-store iscsi-test-pool-1/iscsi-rbd-image-1 --bstype rbd
 7、允许访问LUN
 root@ubuntu:~# tgtadm --lld iscsi --op bind --mode target --tid 1 -I ALL
@@ -210,7 +210,7 @@ sdc                            8:32   0    1G  0 disk
 sr0                           11:0    1  667M  0 rom
 
 
-windows client node 
+windows client node
 ```
 
 
