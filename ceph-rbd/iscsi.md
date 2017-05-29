@@ -3,6 +3,7 @@
 ```
 博客
 http://www.sysnote.org/2017/04/21/three-iscsitargets-io-flow/
+http://blog.csdn.net/vah101/article/details/6300197
 参考
 http://www.open-iscsi.org/
 # tgt project
@@ -180,7 +181,7 @@ root@ubuntu:~# vim /etc/ceph/ceph.conf
 rbd_cache = false
 
 
-client node (192.168.30.129)
+linux client node (192.168.30.129)
 1.安装open-iscsi
 root@ubuntu1604fio:~# apt-get install  open-iscsi
 2.重启open-iscsi服务
@@ -207,6 +208,9 @@ sdb                            8:16   0   10G  0 disk
 └─sdb2                         8:18   0    5G  0 part 
 sdc                            8:32   0    1G  0 disk 
 sr0                           11:0    1  667M  0 rom
+
+
+windows client node 
 ```
 
 
