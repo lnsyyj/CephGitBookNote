@@ -133,7 +133,7 @@ root@ubuntu:~# ll /dev/sd
 sda   sda1  sda2  sda5  sdb   sdb1  sdb2  sdc
 ```
 
-多HOST实验步骤
+多HOST实验步骤：
 
 ```
 参考文章：http://www.bkjia.com/yjs/1018700.html
