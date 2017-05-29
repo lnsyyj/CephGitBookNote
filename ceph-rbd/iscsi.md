@@ -138,11 +138,34 @@ sda   sda1  sda2  sda5  sdb   sdb1  sdb2  sdc
 ```
 参考文章：http://www.bkjia.com/yjs/1018700.html
 
-server node
+server node (192.168.30.128)
+
+root@ubuntu:~/Codes/Go/test/hello# rados lspools 
+rbd
+root@ubuntu:~/Codes/Go/test/hello# rbd ls rbd
+image-0
+image-1
+test_image
+
+root@ubuntu:~/Codes/Go/test/hello# cat /etc/tgt/targets.conf 
+# Empty targets configuration file -- please see the package
+# documentation directory for an example.
+#
+# You can drop individual config snippets into /etc/tgt/conf.d
+include /etc/tgt/conf.d/*.conf
+
+root@ubuntu:~/Codes/Go/test/hello# vi /etc/tgt/conf.d/ceph.conf
+添加
+<target iqn.2014-04.rbdstore.example.com:iscsi>
+    driver iscsi
+    bs-type rbd
+    backing-store rbd/test_image        # Format is <iscsi-pool>/<iscsi-rbd-image>
+    initiator-address 192.168.30.129    #client address allowed to map the address
+</target>
 
 
 
-client node
+client node (192.168.30.129)
 1.安装open-iscsi
 root@ubuntu1604fio:~# apt-get install  open-iscsi
 2.重启open-iscsi服务
@@ -168,10 +191,7 @@ sdb                            8:16   0   10G  0 disk
 ├─sdb1                         8:17   0    5G  0 part /var/lib/ceph/osd/ceph-1
 └─sdb2                         8:18   0    5G  0 part 
 sdc                            8:32   0    1G  0 disk 
-sr0                           11:0    1  667M  0 rom  
-
-
-
+sr0                           11:0    1  667M  0 rom
 ```
 
 
