@@ -214,6 +214,7 @@ windows client node
 http://www.jb51.net/os/windows/89053.html
 http://blog.csdn.net/bearcatfly/article/details/70242369
 http://www.xiazaijidi.com/jc/3072.html
+http://blog.csdn.net/mj404/article/details/42321291
 ```
 
 
