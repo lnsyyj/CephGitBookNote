@@ -211,6 +211,9 @@ sr0                           11:0    1  667M  0 rom
 
 
 windows client node
+http://www.jb51.net/os/windows/89053.html
+http://blog.csdn.net/bearcatfly/article/details/70242369
+http://www.xiazaijidi.com/jc/3072.html
 ```
 
 
