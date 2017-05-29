@@ -163,7 +163,7 @@ root@ubuntu:~# cat /etc/tgt/targets.conf
 # You can drop individual config snippets into /etc/tgt/conf.d
 include /etc/tgt/conf.d/*.conf
 
-root@ubuntu:~/Codes/Go/test/hello# vi /etc/tgt/conf.d/ceph.conf
+root@ubuntu:~# vi /etc/tgt/conf.d/ceph.conf
 添加
 <target iqn.2014-04.rbdstore.example.com:iscsi>
     driver iscsi
