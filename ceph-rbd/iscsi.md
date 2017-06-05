@@ -132,7 +132,13 @@ root@ubuntu:~# iscsiadm -m node --login
 10、这时，在ubuntu下多了一块sdc
 root@ubuntu:~# ll /dev/sd
 sda   sda1  sda2  sda5  sdb   sdb1  sdb2  sdc
-11、logout
+11、
+mkfs.ext4 /dev/sdh
+12、
+mount /dev/sdh /mnt/yujiang/
+13、
+umount /mnt/yujiang
+14、logout
 iscsiadm --mode node --targetname target-test --portal 192.168.1.200:3260 --logout
 ```
 
