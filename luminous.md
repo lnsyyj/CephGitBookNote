@@ -4,6 +4,12 @@ CEPH V12.2.0 LUMINOUS中文release-notes
 http://mp.weixin.qq.com/s/PyhpKoUneiNdtr9JggWXdw
 ```
 
+参考文章
+
+```
+http://ceph.com/planet/ceph-luminous-%E6%96%B0%E5%8A%9F%E8%83%BD%E4%B9%8B%E5%86%85%E7%BD%AEdashboard/
+```
+
 ubuntu1604源安装
 
 ```
@@ -49,18 +55,17 @@ yujiang@ubuntu001:~$ sudo ceph -s
     id:     928739d7-df46-43c8-8488-2bd35bacedfb
     health: HEALTH_WARN
             no active mgr
- 
+
   services:
     mon: 1 daemons, quorum ubuntu001
     mgr: no daemons active
     osd: 2 osds: 2 up, 2 in
- 
+
   data:
     pools:   0 pools, 0 pgs
     objects: 0 objects, 0 bytes
     usage:   0 kB used, 0 kB / 0 kB avail
-    pgs:     
-
+    pgs:
 ```
 
 
