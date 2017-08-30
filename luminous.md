@@ -66,8 +66,26 @@ yujiang@ubuntu001:~$ sudo ceph -s
     objects: 0 objects, 0 bytes
     usage:   0 kB used, 0 kB / 0 kB avail
     pgs:
-    
+
 yujiang@ubuntu001:~/ceph-deploy$ ceph-deploy mgr create ubuntu001:yujiangmgr
+yujiang@ubuntu001:~/ceph-deploy$ sudo cp *.keyring /etc/ceph/
+yujiang@ubuntu001:~/ceph-deploy$ ceph mgr module enable dashboard
+yujiang@ubuntu001:~/ceph-deploy$ sudo ceph -s
+  cluster:
+    id:     928739d7-df46-43c8-8488-2bd35bacedfb
+    health: HEALTH_OK
+ 
+  services:
+    mon: 1 daemons, quorum ubuntu001
+    mgr: yujiangmgr(active)
+    osd: 2 osds: 2 up, 2 in
+ 
+  data:
+    pools:   1 pools, 128 pgs
+    objects: 0 objects, 0 bytes
+    usage:   2110 MB used, 28407 MB / 30517 MB avail
+    pgs:     128 active+clean
+
 ```
 
 
