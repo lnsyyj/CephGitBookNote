@@ -85,7 +85,7 @@ yujiang@ubuntu001:~/ceph-deploy$ sudo ceph -s
     objects: 0 objects, 0 bytes
     usage:   2110 MB used, 28407 MB / 30517 MB avail
     pgs:     128 active+clean
-    
+
 yujiang@ubuntu001:~/ceph-deploy$ sudo ceph osd tree
 ID CLASS WEIGHT  TYPE NAME          STATUS REWEIGHT PRI-AFF 
 -1       0.02917 root default                               
@@ -98,9 +98,10 @@ GLOBAL:
     30517M     28407M        2110M          6.92 
 POOLS:
     NAME     ID     USED     %USED     MAX AVAIL     OBJECTS 
-    rbd      1         0         0        26881M           0 
-
+    rbd      1         0         0        26881M           0
 ```
+
+打开浏览器http://192.168.30.134:7000/
 
 
 
