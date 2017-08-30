@@ -101,7 +101,7 @@ POOLS:
     rbd      1         0         0        26881M           0
 ```
 
-打开浏览器http://192.168.30.134:7000/
+打开浏览器[http://192.168.30.134:7000/](http://192.168.30.134:7000/)
 
-
+![](/images/ceph/luminous/ceph-luminous-deshbord.png)
 
