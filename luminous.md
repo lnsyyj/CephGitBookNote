@@ -74,17 +74,31 @@ yujiang@ubuntu001:~/ceph-deploy$ sudo ceph -s
   cluster:
     id:     928739d7-df46-43c8-8488-2bd35bacedfb
     health: HEALTH_OK
- 
+
   services:
     mon: 1 daemons, quorum ubuntu001
     mgr: yujiangmgr(active)
     osd: 2 osds: 2 up, 2 in
- 
+
   data:
     pools:   1 pools, 128 pgs
     objects: 0 objects, 0 bytes
     usage:   2110 MB used, 28407 MB / 30517 MB avail
     pgs:     128 active+clean
+    
+yujiang@ubuntu001:~/ceph-deploy$ sudo ceph osd tree
+ID CLASS WEIGHT  TYPE NAME          STATUS REWEIGHT PRI-AFF 
+-1       0.02917 root default                               
+-3       0.02917     host ubuntu001                         
+ 0   hdd 0.01459         osd.0          up  1.00000 1.00000 
+ 1   hdd 0.01459         osd.1          up  1.00000 1.00000 
+yujiang@ubuntu001:~/ceph-deploy$ sudo ceph df
+GLOBAL:
+    SIZE       AVAIL      RAW USED     %RAW USED 
+    30517M     28407M        2110M          6.92 
+POOLS:
+    NAME     ID     USED     %USED     MAX AVAIL     OBJECTS 
+    rbd      1         0         0        26881M           0 
 
 ```
 
