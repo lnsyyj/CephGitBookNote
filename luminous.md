@@ -9,10 +9,10 @@ ubuntu1604源安装
 ```
 yujiang@ubuntu001:~$ lsb_release --all
 No LSB modules are available.
-Distributor ID:	Ubuntu
-Description:	Ubuntu 16.04.1 LTS
-Release:	16.04
-Codename:	xenial
+Distributor ID:    Ubuntu
+Description:    Ubuntu 16.04.1 LTS
+Release:    16.04
+Codename:    xenial
 
 yujiang@ubuntu001:~$ wget -q -O- 'https://download.ceph.com/keys/release.asc' | sudo apt-key add -
 yujiang@ubuntu001:~$ echo deb https://download.ceph.com/debian/ $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/ceph.list
@@ -22,6 +22,23 @@ yujiang@ubuntu001:~$ sudo apt-get install ceph
 yujiang@ubuntu001:~$ ceph -v
 ceph version 12.2.0 (32ce2a3ae5239ee33d6150705cdb24d43bab910c) luminous (rc)
 
+yujiang@ubuntu001:~/ceph-deploy$ ceph-deploy  new --public-network 192.168.30.134/24 --cluster-network 192.168.30.134/24 ubuntu001
+yujiang@ubuntu001:~/ceph-deploy$ ceph-deploy mon create-initial
+yujiang@ubuntu001:~/ceph-deploy$ ceph-deploy mon create
+
+yujiang@ubuntu001:~$ lsblk
+NAME                     MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+fd0                        2:0    1    4K  0 disk 
+sda                        8:0    0   60G  0 disk 
+├─sda1                     8:1    0  487M  0 part /boot
+├─sda2                     8:2    0    1K  0 part 
+└─sda5                     8:5    0 59.5G  0 part 
+  ├─ubuntu001--vg-root   252:0    0 57.5G  0 lvm  /
+  └─ubuntu001--vg-swap_1 252:1    0    2G  0 lvm  [SWAP]
+sdb                        8:16   0   15G  0 disk 
+sdc                        8:32   0   15G  0 disk 
+sr0                       11:0    1 1024M  0 rom
+yujiang@ubuntu001:~/ceph-deploy$ ceph-deploy osd prepare ubuntu001:/dev/sdb ubuntu001:/dev/sdc
 ```
 
 
