@@ -65,6 +65,7 @@ ceph-deploy install ceph-01 --release jewel --repo-url http://mirrors.163.com/ce
 或
 export CEPH_DEPLOY_REPO_URL=http://mirrors.163.com/ceph/debian-luminous
 export CEPH_DEPLOY_GPG_URL=http://mirrors.163.com/ceph/keys/release.asc
+ceph-deploy install ceph-01
 ```
 
 7.创建一个目录（ceph-deploy会生成一些配置文件，方便管理和查看，所以ceph-deploy操作都在这个目录下执行）
