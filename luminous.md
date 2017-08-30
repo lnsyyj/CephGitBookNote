@@ -45,7 +45,7 @@ sdb                        8:16   0   15G  0 disk
 sdc                        8:32   0   15G  0 disk 
 sr0                       11:0    1 1024M  0 rom
 yujiang@ubuntu001:~/ceph-deploy$ ceph-deploy osd prepare ubuntu001:/dev/sdb ubuntu001:/dev/sdc
-yujiang@ubuntu001:~/ceph-deploy$ ceph-deploy admin ubuntu001
+yujiang@ubuntu001:~/ceph-deploy$ sudo cp *.keyring /etc/ceph/
 
 L版默认不创建rbd pool，手动创建一个
 yujiang@ubuntu001:~$ sudo ceph osd pool create rbd 128
@@ -66,6 +66,8 @@ yujiang@ubuntu001:~$ sudo ceph -s
     objects: 0 objects, 0 bytes
     usage:   0 kB used, 0 kB / 0 kB avail
     pgs:
+    
+yujiang@ubuntu001:~/ceph-deploy$ ceph-deploy mgr create ubuntu001:yujiangmgr
 ```
 
 
