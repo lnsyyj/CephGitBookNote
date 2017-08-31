@@ -99,6 +99,11 @@ GLOBAL:
 POOLS:
     NAME     ID     USED     %USED     MAX AVAIL     OBJECTS 
     rbd      1         0         0        26881M           0
+
+
+root@ubuntu001:~# ps -ef | grep ceph-mgr
+ceph      1390     1  0 22:54 ?        00:00:08 /usr/bin/ceph-mgr -f --cluster ceph --id yujiangmgr --setuser ceph --setgroup ceph
+
 ```
 
 打开浏览器[http://192.168.30.134:7000/](http://192.168.30.134:7000/)
